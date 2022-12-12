@@ -40,8 +40,9 @@
 #game-screen-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-direction: column;
+  width: 100%;
+  align-content: flex-start;
 }
 
 /* Window showing sum, odds or even, who wins */
@@ -83,4 +84,3 @@
 #countdown-two, #countdown-one, #countdown-shoot {
   opacity: 0;
 }
-

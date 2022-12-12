@@ -40,7 +40,7 @@ nav {
 @media only screen and (max-width: 480px) {
   
   header h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   section, .footer {
     transform: scale(0.7);
@@ -51,10 +51,10 @@ nav {
   }
 
   section {
-    top: -75px;
+    top: -88px;
   }
 
   .footer {
-    top: -165px;
+    top: -178px;
   }
 }

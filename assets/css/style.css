@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0.8;
-  z-index: 3;
+  z-index: 4;
   background-color: white;
 }
 
@@ -45,49 +45,48 @@
   font-size: 25px;
 }
 
-@media only screen and (max-width: 480px) {
-  
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
   header h1 {
     font-size: 35px;
   }
 
+  .full-page-container {
+    transform: scale(0.8);
+    position: absolute;
+    top: -15px;
+  }
+
   #window-submit-max-score,#countdown-container,#sum-display-container, #scores-display-container,#end-game, #number-display-container {
-    transform: scale(0.7);
+    top: 100px;
   }
 
-  #buttons, #img-numbers, #play-button-container, .footer {
-    transform: scale(0.7);
+  #matt-blanket {
+    width: 125vw;
+    height: 125vh;
+    top: -80px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  header h1 {
+    font-size: 30px;
   }
 
-  #window-submit-max-score {
-    margin-top: -75px;
-  }
-
-  #countdown-container, #sum-display-container, #scores-display-container, #end-game{
-    margin-top: -75px;
-  }
-
-  #number-display-container-1 {
-    margin-top: -77px;
-  }
-
-  #buttons, #img-numbers, #play-button-container, .footer {
+  .full-page-container {
+    transform: scale(0.64);
     position: relative;
+    top: -145px;
   }
 
-  #buttons {
-    top: -65px;
+  #window-submit-max-score,#countdown-container,#sum-display-container, #scores-display-container,#end-game, #number-display-container {
+    top: 100px;
   }
 
-  #img-numbers {
-    top: -95px;
-  }
-
-  #play-button-container {
-    top: -125px;
-  }
-
-  .footer {
-    top: -155px;
+  #matt-blanket {
+    width: 180vw;
+    height: 180vh;
+    top: -100px;
   }
 }

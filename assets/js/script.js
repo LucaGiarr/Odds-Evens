@@ -156,6 +156,7 @@ async function delayedFunctions() {
   let youNum = getNumber();
 
   // sum is calculated, checked (odd or even) and displayed
+  let sumNum = sumNumbers(pcNum, youNum);
 
   // Check who is the winner
   // Hands are hidden
@@ -203,4 +204,11 @@ function getNumber() {
   let youNum = document.getElementById("you-number-display").getAttribute("alt");
   youNum = parseInt(youNum[youNum.length - 1]);
   return youNum;
+}
+
+/**
+ * Returns the sum of two numbers
+ */
+function sumNumbers(num1, num2) {
+  return num1 + num2;
 }

@@ -34,9 +34,8 @@ startButton.addEventListener("click", function () {
     throw alert("Max number of rounds is 9");
 
   } else {
-
+    removeWindowAndOpacity();
     displayMaxScoreNumb();
-
   }
 })
 
@@ -93,6 +92,14 @@ document.getElementById("play-button").onclick = function () {
 
 
 // Functions
+/**
+ * Hides the small window with the input for the number of rounds and remove opacity from the page
+ */
+function removeWindowAndOpacity() {
+  document.getElementById("window-submit-max-score").style.visibility = "hidden";
+  document.getElementById("matt-blanket").style.visibility = "hidden";
+}
+
 function displayMaxScoreNumb() {
   document.getElementById("pc-score").innerText = `SCORE (0/${maxScoreNumb})`;
   document.getElementById("you-score").innerText = `SCORE (0/${maxScoreNumb})`;
@@ -152,8 +159,12 @@ async function delayedFunctions() {
   // random number is calculated (pc) and displayed
   let pcNum = randPcNumb();
 
+  await delay(4000);
+
   // you-number is obtained
   let youNum = getNumber();
+
+  await delay(500);
 
   // sum is calculated, checked (odd or even) and displayed
   let sumNum = sumNumbers(pcNum, youNum);
@@ -166,15 +177,21 @@ async function delayedFunctions() {
   } else {
     whoWins = "PC wins!";
   }
+
+  await delay(2000);
   
   // Winner is displayed and scores added to the counter
   displayResultsWinner(sumNum, sumOddsEvens, whoWins);  
+
+  await delay(2000);
 
   // Increment score and display pc score and you score
   displayScores(whoWins);
 
   // Get scores (pc and you)
   let scores = currentScores();
+
+  await delay(2000);
 
   let pcScore = Math.max(scores[0]);
   let youScore = Math.max(scores[1]);
@@ -187,7 +204,23 @@ async function delayedFunctions() {
       displayEndGame("You win!");
     }
 
+    await delay(2000);
+
     // play again or go to start (buttons)
+    let playAgain = document.getElementById("play-again-button");
+    let goToStart = document.getElementById("go-to-start-button");
+
+    playAgain.addEventListener("click", function () {
+      
+      restoreDefault();
+      oddsClicked = "false";
+      evensClicked = "false";
+      youChoice = "";
+    });
+
+    goToStart.addEventListener("click", function () {
+      window.open("index.html", "_self");
+    });
 
   } else {
 

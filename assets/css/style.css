@@ -1,4 +1,16 @@
 /* Main game area */
+#matt-blanket {
+  width: 100vw;
+  height: max(920px, 100vh);
+  position: absolute;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  z-index: 3;
+  background-color: white;
+}
+
 #number-display-container-1  {
   background-color: #320d6d;
   border: 7px solid white;

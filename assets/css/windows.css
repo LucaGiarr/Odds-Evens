@@ -1,0 +1,27 @@
+/* Window submit number of rounds */
+#window-submit-max-score {
+  display: flex;
+  width: 400px;
+  height: 240px;
+  position: absolute;
+  top: 170px;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 2px solid black;
+}
+
+#window-submit-max-score label {
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 32px;
+  margin-top: 25px;
+}
+
+#max-score {
+  margin: 22px 0;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 18px;
+}

@@ -150,7 +150,7 @@ async function delayedFunctions() {
   // 3, 2, 1... SHOOT!!
 
   // random number is calculated (pc) and displayed
-
+  let pcNum = randPcNumb();
 
   // you-number is displayed (small) and checked (odd or even)
 
@@ -179,9 +179,18 @@ async function delayedFunctions() {
   }
 }
 
-// resolved  how to create a "sleep" function from websites below
+// resolved  how to create a "delay" function from websites below
 // https://linuxhint.com/wait-x-seconds-javascript/
 // https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Calculates a random number between 0-5 and write the code in the DOM to display the "hand" with the random number
+ */
+function randPcNumb() {
+  let pcNum = Math.floor(Math.random() * 5) + 1;
+  document.getElementById("pc-number-display").outerHTML = `<img id="pc-number-display" src="assets/images/number${pcNum}.png" alt="number${pcNum}">`;
+  return pcNum;
 }

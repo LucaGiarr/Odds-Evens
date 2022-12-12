@@ -10,15 +10,18 @@
   background-color: white;
   border: 2px solid black;
   
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
-/* Window submit number of rounds */
+/* Window submit max score */
 #window-submit-max-score label {
   font-family: "Luckiest Guy", sans-serif;
   font-size: 32px;
   margin-top: 25px;
-  
+}
+
+#window-submit-max-score {
+  z-index: 5;
 }
 
 #max-score {
@@ -34,4 +37,16 @@
 #sum-display-container {
   z-index: 1;
   opacity: 0;
+}
+
+
+/* Window showing scores */
+#scores-display-container {
+  visibility: hidden;
+}
+
+
+/* end game window */
+#end-game {
+  visibility: hidden;
 }

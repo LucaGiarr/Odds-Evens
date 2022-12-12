@@ -160,9 +160,15 @@ async function delayedFunctions() {
   let sumOddsEvens = checkNumb(sumNum);
 
   // Check who is the winner
-  // Hands are hidden
-
+  let whoWins = "";
+  if (youChoice === sumOddsEvens) {
+    whoWins = "You win!";
+  } else {
+    whoWins = "PC wins!";
+  }
+  
   // Winner is displayed and scores added to the counter
+  displayResultsWinner(sumNum, sumOddsEvens, whoWins);  
 
   // Increment score and display pc score and you score
 
@@ -225,4 +231,16 @@ function checkNumb(numb) {
     result = "odd";
   }
   return result;
+}
+
+// Function to display in the DOM the results and the winner
+function displayResultsWinner(sumNum, sumOddsEvens, whoWins) {
+  let winner = document.getElementById("sum-display-container");
+
+  winner.children[0].innerText = `the sum is ${sumNum}`;
+  winner.children[1].innerText = sumOddsEvens;
+  winner.children[2].innerText = whoWins;
+
+  winner.style.transitionDuration = "0.3s";
+  winner.style.opacity = "1";
 }

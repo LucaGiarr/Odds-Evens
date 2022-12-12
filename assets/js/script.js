@@ -159,12 +159,12 @@ async function delayedFunctions() {
   // random number is calculated (pc) and displayed
   let pcNum = randPcNumb();
 
-  await delay(4000);
+  // await delay(4000);
 
   // you-number is obtained
   let youNum = getNumber();
 
-  await delay(500);
+  // await delay(500);
 
   // sum is calculated, checked (odd or even) and displayed
   let sumNum = sumNumbers(pcNum, youNum);
@@ -225,6 +225,7 @@ async function delayedFunctions() {
   } else {
 
     // Restore the initial styles
+    initialStyles();
   }
 }
 
@@ -330,4 +331,62 @@ function displayEndGame(result) {
   document.getElementById("end-game").children[0].innerText = result;
   document.getElementById("end-game").style.opacity = "1";
   document.getElementById("end-game").style.transitionDuration = "0.5s";
+}
+
+/**
+ * Restore default styles (initial styles) but keep max score of the previous round
+ */
+function restoreDefault() {
+  // Remove matt-blanket
+  document.getElementById("matt-blanket").style.visibility = "hidden";
+
+  // Hide message "Game over" or "You win!"
+  document.getElementById("end-game").style.opacity = "0";
+
+  // Restore default "ODDS" and "EVENS" buttons 
+  if (youChoice === "odd") {
+    highlightButton(oddsButton, "false");
+  } else {
+    highlightButton(evensButton, "false");
+  }
+  oddsClicked = "false";
+  evensClicked = "false";
+  youChoice = "";
+
+  // Restore initial images "hands"
+  document.getElementById("pc-number-display").outerHTML = `<img id="pc-number-display" src="assets/images/question_mark.png" alt="question mark">`;
+  document.getElementById("you-number-display").outerHTML = `<img id="you-number-display" src="assets/images/number1.png" alt="number1">`;
+
+  // Restore scores
+  document.getElementById("pc-score").innerHTML = `SCORE (0/${maxScoreNumb})`;
+  document.getElementById("you-score").innerHTML = `SCORE (0/${maxScoreNumb})`;
+
+  // Enable play button
+  document.getElementById("play-button").disabled = false;
+}
+
+// Restore initial styles
+function initialStyles() {
+
+  // Hide Results and winner
+  let sumDisplContainer = document.getElementById("sum-display-container");
+  sumDisplContainer.style.opacity = "0";
+  sumDisplContainer.style.transitionDuration = "0.5s";
+
+  let scoresDisplContainer = document.getElementById("scores-display-container");
+  scoresDisplContainer.style.opacity = "0";
+  scoresDisplContainer.style.transitionDuration = "0.5s";
+
+  // Show initial you-number-display (hand)
+  let pcNumDisplay = document.getElementById("pc-number-display");
+  pcNumDisplay.outerHTML = `<img id="pc-number-display" src="assets/images/question_mark.png" alt="question mark">`;
+  pcNumDisplay.style.opacity = "1";
+  pcNumDisplay.style.transitionDuration = "0.5s";
+
+  let youNumDisplay = document.getElementById("you-number-display");
+  youNumDisplay.style.opacity = "1";
+  youNumDisplay.style.transitionDuration = "0.5s";
+
+  // Enable play button
+  document.getElementById("play-button").disabled = false;
 }

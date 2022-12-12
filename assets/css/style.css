@@ -40,3 +40,7 @@
   color: white;
   margin: 0;
 }
+
+#pc-player, #you-player {
+  font-size: 25px;
+}

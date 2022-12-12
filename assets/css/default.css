@@ -1,0 +1,38 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/* Default styles */
+h2, h3, h4 {
+  font-family: 'Sriracha', sans-serif;
+  font-size: 20px;
+}
+
+p, li {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FDE3E0;
+}
+
+header h1{
+  color: #2191FB;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 45px;
+  padding: 10px 0 0 0;
+  margin: 10px 0;
+}
+
+.full-page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}

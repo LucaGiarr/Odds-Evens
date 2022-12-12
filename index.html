@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Style Sheets -->
+  <link rel="stylesheet" href="assets/css/default.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Odds & Evens</title>
+  <title>Odds and Evens</title>
 </head>
 
 <body>
@@ -18,71 +19,74 @@
     <h1>Odds & Evens</h1>
   </header>
 
-  <div>
-    <label for="max-score">Winning Score:</label>
-    <input type="number" id="max-score" name="max-score" min="1" max="9" placeholder="max 9" value="1">
-    <button type="submit" id="how-to-play-button">HOW TO PLAY</button>
-    <button type="submit" id="start-button">START</button>
-  </div>
-
-  <div id="sum-display-container">
-    <h3>the sum is No.</h3>
-    <h3>odds</h3>
-    <h3>you win!</h3>
-  </div>
-
-  <div id="scores-display-container">
-    <h3>pc score</h3>
-    <h3>0</h3>
-    <h3>your score</h3>
-    <h3>0</h3>
-  </div>
-
-  <div id="end-game">
-    <h3>Game Over</h3>
-    <div id="end-game-buttons-container">
-      <button type="submit" id="play-again-button">PLAY AGAIN</button>
-      <button type="submit" id="go-to-start-button">GO TO START</button>
+  <div class="full-page-container">
+    <div>
+      <label for="max-score">Winning Score:</label>
+      <input type="number" id="max-score" name="max-score" min="1" max="9" placeholder="max 9" value="1">
+      <button type="submit" id="how-to-play-button">HOW TO PLAY</button>
+      <button type="submit" id="start-button">START</button>
     </div>
-  </div>
-
-  <!-- Container in which the pc-number and score are shown -->
-  <div id="number-display-container">
-    <div id="number-display-container-1">
-      <h3 id="pc-player">PC</h3>
-      <h4 id="pc-score">SCORE</h4>
-      <img id="pc-number-display" src="" alt="question mark">
+  
+    <div id="sum-display-container">
+      <h3>the sum is No.</h3>
+      <h3>odds</h3>
+      <h3>you win!</h3>
     </div>
-
-    <!-- Container in which the you-number and score are shown -->
-    <div id="number-display-container-2">
-      <img id="you-number-display" src="" alt="number1">
-      <h3 id="you-player">YOU</h3>
-      <h4 id="you-score">SCORE</h4>
+  
+    <div id="scores-display-container">
+      <h3>pc score</h3>
+      <h3>0</h3>
+      <h3>your score</h3>
+      <h3>0</h3>
     </div>
+  
+    <div id="end-game">
+      <h3>Game Over</h3>
+      <div id="end-game-buttons-container">
+        <button type="submit" id="play-again-button">PLAY AGAIN</button>
+        <button type="submit" id="go-to-start-button">GO TO START</button>
+      </div>
+    </div>
+  
+    <!-- Container in which the pc-number and score are shown -->
+    <div id="number-display-container">
+      <div id="number-display-container-1">
+        <h3 id="pc-player">PC</h3>
+        <h4 id="pc-score">SCORE</h4>
+        <img id="pc-number-display" src="" alt="question mark">
+      </div>
+  
+      <!-- Container in which the you-number and score are shown -->
+      <div id="number-display-container-2">
+        <img id="you-number-display" src="" alt="number1">
+        <h3 id="you-player">YOU</h3>
+        <h4 id="you-score">SCORE</h4>
+      </div>
+    </div>
+  
+    <!-- Container with the ODDS and EVENS buttons -->
+    <div id="buttons">
+      <button id="odds-button">ODDS</button>
+      <button id="evens-button">EVENS</button>
+    </div>
+  
+    <!-- Container with the hand images -->
+    <div id="img-numbers">
+      <img id="img0" src="" alt="number0">
+      <img id="img1" src="" alt="number1">
+      <img id="img2" src="" alt="number2">
+      <img id="img3" src="" alt="number3">
+      <img id="img4" src="" alt="number4">
+      <img id="img5" src="" alt="number5">
+    </div>
+  
+    <div id="play-button-container">
+      <button id="play-button">PLAY</button>
+    </div>
+  
+    <footer>here the footer</footer>
   </div>
-
-  <!-- Container with the ODDS and EVENS buttons -->
-  <div id="buttons">
-    <button id="odds-button">ODDS</button>
-    <button id="evens-button">EVENS</button>
-  </div>
-
-  <!-- Container with the hand images -->
-  <div id="img-numbers">
-    <img id="img0" src="" alt="number0">
-    <img id="img1" src="" alt="number1">
-    <img id="img2" src="" alt="number2">
-    <img id="img3" src="" alt="number3">
-    <img id="img4" src="" alt="number4">
-    <img id="img5" src="" alt="number5">
-  </div>
-
-  <div id="play-button-container">
-    <button id="play-button">PLAY</button>
-  </div>
-
-  <footer>here the footer</footer>
+  
 
 
   <!-- Script Javascript -->

@@ -9,8 +9,6 @@
   align-items: center;
   background-color: white;
   border: 2px solid black;
-  
-  /* visibility: hidden; */
 }
 
 /* Window submit max score */
@@ -22,8 +20,6 @@
 
 #window-submit-max-score {
   z-index: 5;
-
-  /* visibility: hidden; */
 }
 
 #max-score {
@@ -33,6 +29,13 @@
   text-align: center;
   overflow: hidden;
   font-size: 18px;
+}
+
+#game-screen-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 /* Window showing sum, odds or even, who wins */
@@ -50,5 +53,12 @@
 
 /* end game window */
 #end-game {
-  visibility: hidden;
+  z-index: 4;
+  opacity: 0;
+}
+
+#sum-display-container h3, #scores-display-container h3, #end-game h3 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: auto 0;
 }

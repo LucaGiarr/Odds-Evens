@@ -3,7 +3,7 @@
 
 
 /* General Buttons */
-#buttons button, #play-button, #how-to-play-button, #start-button, #play-again-button {
+#buttons button, #play-button, #how-to-play-button, #start-button, #play-again-button, #play-again-button, #go-to-start-button {
   width: 100px;
   padding: 5px;
   margin-left: 5px;
@@ -45,6 +45,21 @@
   background-color: white;
   border: 7px solid white;
   padding: 5px 0 5px 0;
+}
+
+/* Buttons end of the game */
+#end-game-buttons-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#play-again-button, #go-to-start-button {
+  width: 130px;
+}
+
+#back-to-game-button {
+  width: 200px;
 }
 
 /* Hover button style */

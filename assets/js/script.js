@@ -173,12 +173,18 @@ async function delayedFunctions() {
   // Increment score and display pc score and you score
   displayScores(whoWins);
 
+  // Get scores (pc and you)
+  let scores = currentScores();
+
+  let pcScore = Math.max(scores[0]);
+  let youScore = Math.max(scores[1]);
+
   if (Math.max(pcScore, youScore) == maxScoreNumb) {
 
     if (pcScore > youScore) {
-      // display game over
+      displayEndGame("Game Over");
     } else {
-      // display you win
+      displayEndGame("You win!");
     }
 
     // play again or go to start (buttons)
@@ -270,4 +276,25 @@ function displayScores(whoWins) {
   disScores.children[3].innerHTML = `<h3>${youScoreNum}</h3>`;
   document.getElementById("scores-display-container").style.opacity = "1";
   document.getElementById("scores-display-container").style.transitionDuration = "0.5s";
+}
+
+// Reads current scores in the DOM
+function currentScores() {
+  let pcScore = document.getElementById("pc-score").innerText;
+  let pcScoreNum = parseInt(pcScore[pcScore.length - 4]);
+
+  let youScore = document.getElementById("you-score").innerText;
+  let youScoreNum = parseInt(youScore[youScore.length - 4]);
+
+  return [pcScoreNum, youScoreNum];
+}
+
+// Hides window with the scores and shows window with winner and buttons to play again
+function displayEndGame(result) {
+  document.getElementById("scores-display-container").style.opacity = "0";
+  document.getElementById("scores-display-container").style.transitionDuration = "0.5s";
+
+  document.getElementById("end-game").children[0].innerText = result;
+  document.getElementById("end-game").style.opacity = "1";
+  document.getElementById("end-game").style.transitionDuration = "0.5s";
 }

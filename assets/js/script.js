@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+howToPlayButton.addEventListener("click", function () {
+
+  window.open("howtoplay.html", "_self");
+
+})
+
 startButton.addEventListener("click", function () {
 
   let maxScore = document.getElementById("max-score");

@@ -3,7 +3,7 @@
 
 
 /* General Buttons */
-#buttons button, #play-button, #how-to-play-button, #start-button, #play-again-button, #play-again-button, #go-to-start-button {
+#buttons button, #play-button, #how-to-play-button, #start-button, #play-again-button, #go-to-start-button, #back-to-game-button {
   width: 100px;
   padding: 5px;
   margin-left: 5px;
@@ -63,7 +63,7 @@
 }
 
 /* Hover button style */
-#start-button:hover,#odds-button:hover, #evens-button:hover,#play-button:active, #how-to-play-button:hover {
+#start-button:hover,#odds-button:hover, #evens-button:hover,#play-button:active, #play-again-button:hover, #go-to-start-button:hover, #how-to-play-button:hover, #back-to-game-button:hover {
   background-color: black;
   color: white;
 }

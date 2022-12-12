@@ -1,0 +1,39 @@
+/* Instruction page */
+.instructions-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions-list-container h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.instructions-list-container ol{
+  text-align: justify;
+  margin: 5px 20px;
+  padding-left: 20px;
+  
+}
+
+.istructions-list li {
+  padding: 5px 0;
+  font-family: "Times New Roman", sans-serif;
+}
+
+section {
+  background-color: white;
+  width: 450px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  text-align: center;
+  margin: 20px auto;
+}

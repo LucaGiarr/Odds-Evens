@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
+/* Remove arrows/spinners in Chrome, Safari, Edge, Opera (https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp)*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* Default styles */
 h2, h3, h4 {
   font-family: 'Sriracha', sans-serif;

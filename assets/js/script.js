@@ -151,6 +151,7 @@ async function delayedFunctions() {
 
   // random number is calculated (pc) and displayed
 
+
   // you-number is displayed (small) and checked (odd or even)
 
   // sum is calculated, checked (odd or even) and displayed
@@ -176,4 +177,11 @@ async function delayedFunctions() {
 
     // Restore the initial styles
   }
+}
+
+// resolved  how to create a "sleep" function from websites below
+// https://linuxhint.com/wait-x-seconds-javascript/
+// https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }

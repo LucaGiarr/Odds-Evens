@@ -24,7 +24,7 @@ howToPlayButton.addEventListener("click", function () {
 
   window.open("howtoplay.html", "_self");
 
-})
+});
 
 startButton.addEventListener("click", function () {
 
@@ -141,7 +141,7 @@ function displayNumberHandYou() {
   }
 }
 
-// when PLAY is clicked
+// When PLAY is clicked
 function runGame() {
 
   // Check if one of the buttons ODDS or EVENS are selected (if no choice is made, it returns an error)

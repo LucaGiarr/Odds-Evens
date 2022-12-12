@@ -1,5 +1,5 @@
 /* General rule */
-#window-submit-max-score,#countdown-container, #sum-display-container,#scores-display-container, #end-game {
+#window-submit-max-score, #countdown-container, #sum-display-container, #scores-display-container, #end-game {
   display: flex;
   width: 400px;
   height: 240px;

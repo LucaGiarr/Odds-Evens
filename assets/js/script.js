@@ -77,6 +77,18 @@ document.getElementById("img-numbers").addEventListener("click", function () {
   getNumber();
 });
 
+document.getElementById("play-button").onclick = function () {
+  runGame();
+};
+
+
+
+
+
+
+
+
+
 
 
 
@@ -117,5 +129,51 @@ function displayNumberHandYou() {
       let numbSelected = this.getAttribute("alt");
       document.getElementById("you-number-display").outerHTML = `<img id="you-number-display" src="assets/images/${numbSelected}.png" alt="${numbSelected}">`;
     });
+  }
+}
+
+// when PLAY is clicked
+function runGame() {
+
+  // Check if one of the buttons ODDS or EVENS are selected (if no choice is made, it returns an error)
+  if (oddsClicked === "false" && evensClicked === "false") {
+
+    throw alert("Please select ODDS or EVENS");
+  }
+
+  delayedFunctions();
+
+}
+
+async function delayedFunctions() {
+
+  // 3, 2, 1... SHOOT!!
+
+  // random number is calculated (pc) and displayed
+
+  // you-number is displayed (small) and checked (odd or even)
+
+  // sum is calculated, checked (odd or even) and displayed
+
+  // Check who is the winner
+  // Hands are hidden
+
+  // Winner is displayed and scores added to the counter
+
+  // Increment score and display pc score and you score
+
+  if (Math.max(pcScore, youScore) == maxScoreNumb) {
+
+    if (pcScore > youScore) {
+      // display game over
+    } else {
+      // display you win
+    }
+
+    // play again or go to start (buttons)
+
+  } else {
+
+    // Restore the initial styles
   }
 }

@@ -1,7 +1,6 @@
 /* Fonts buttons */
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap'); 
 
-
 /* General Buttons */
 #buttons button, #play-button, #how-to-play-button, #start-button, #play-again-button, #go-to-start-button, #back-to-game-button {
   width: 100px;

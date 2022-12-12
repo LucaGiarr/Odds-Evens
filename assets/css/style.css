@@ -44,3 +44,50 @@
 #pc-player, #you-player {
   font-size: 25px;
 }
+
+@media only screen and (max-width: 480px) {
+  
+  header h1 {
+    font-size: 35px;
+  }
+
+  #window-submit-max-score,#countdown-container,#sum-display-container, #scores-display-container,#end-game, #number-display-container {
+    transform: scale(0.7);
+  }
+
+  #buttons, #img-numbers, #play-button-container, .footer {
+    transform: scale(0.7);
+  }
+
+  #window-submit-max-score {
+    margin-top: -75px;
+  }
+
+  #countdown-container, #sum-display-container, #scores-display-container, #end-game{
+    margin-top: -75px;
+  }
+
+  #number-display-container-1 {
+    margin-top: -77px;
+  }
+
+  #buttons, #img-numbers, #play-button-container, .footer {
+    position: relative;
+  }
+
+  #buttons {
+    top: -65px;
+  }
+
+  #img-numbers {
+    top: -95px;
+  }
+
+  #play-button-container {
+    top: -125px;
+  }
+
+  .footer {
+    top: -155px;
+  }
+}

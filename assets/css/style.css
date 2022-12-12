@@ -1,0 +1,30 @@
+/* Main game area */
+#number-display-container-1  {
+  background-color: #320d6d;
+  border: 7px solid white;
+  margin-bottom: -3.5px;
+}
+
+#number-display-container-2  {
+  background-color: #ffd447;
+  border: 7px solid white;
+  margin-top: -3.5px;
+}
+
+#number-display-container-1,#number-display-container-2, #buttons, #img-numbers, #play-button-container, footer {
+  width: 450px;
+}
+
+#number-display-container-1,#number-display-container-2  {
+  height: 50%;
+  text-align: center;
+}
+
+#pc-player, #pc-score,#you-player, #you-score {
+  position: relative;
+  width: 130px;
+  left: 317px;
+  text-align: center;
+  color: white;
+  margin: 0;
+}

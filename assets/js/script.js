@@ -157,6 +157,7 @@ async function delayedFunctions() {
 
   // sum is calculated, checked (odd or even) and displayed
   let sumNum = sumNumbers(pcNum, youNum);
+  let sumOddsEvens = checkNumb(sumNum);
 
   // Check who is the winner
   // Hands are hidden
@@ -211,4 +212,17 @@ function getNumber() {
  */
 function sumNumbers(num1, num2) {
   return num1 + num2;
+}
+
+/**
+ * Checks if the number is odd or even
+ */
+function checkNumb(numb) {
+  let result = "";
+  if (numb % 2 == 0) {
+    result = "even";
+  } else {
+    result = "odd";
+  }
+  return result;
 }

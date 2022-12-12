@@ -1,0 +1,42 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400&display=swap');
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.fixed {
+  position: absolute;
+  top: 500px;
+}
+
+footer h2 {
+  font-family: Lato, sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+
+span {
+  text-transform: uppercase;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+#icons_footer {
+  text-align: center;
+  font-size: 200%;
+  margin: 10px 0;
+  word-spacing: 20px;
+}
+
+#icons_footer a {
+  color: black;
+}

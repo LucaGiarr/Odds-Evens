@@ -1,5 +1,5 @@
-/* Window submit number of rounds */
-#window-submit-max-score {
+/* General rule */
+#window-submit-max-score, #sum-display-container {
   display: flex;
   width: 400px;
   height: 240px;
@@ -9,12 +9,16 @@
   align-items: center;
   background-color: white;
   border: 2px solid black;
+  
+  visibility: hidden;
 }
 
+/* Window submit number of rounds */
 #window-submit-max-score label {
   font-family: "Luckiest Guy", sans-serif;
   font-size: 32px;
   margin-top: 25px;
+  
 }
 
 #max-score {
@@ -24,4 +28,10 @@
   text-align: center;
   overflow: hidden;
   font-size: 18px;
+}
+
+/* Window showing sum, odds or even, who wins */
+#sum-display-container {
+  z-index: 1;
+  opacity: 0;
 }

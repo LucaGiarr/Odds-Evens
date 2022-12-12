@@ -71,6 +71,12 @@ evensButton.addEventListener("click", function () {
   youChoice = "even";
 });
 
+displayNumberHandYou();
+
+document.getElementById("img-numbers").addEventListener("click", function () {
+  getNumber();
+});
+
 
 
 
@@ -96,5 +102,20 @@ function highlightButton(button, isClicked) {
   } else {
     button.style.backgroundColor = defaultBackColor;
     button.style.color = defaultTextColor;
+  }
+}
+
+/**
+ * Displays the number that you choose by clicking on the image with the hands
+ */
+function displayNumberHandYou() {
+
+  let imgNumbers = document.getElementById('img-numbers').children;
+
+  for (var image of imgNumbers) {
+    image.addEventListener("click", function () {
+      let numbSelected = this.getAttribute("alt");
+      document.getElementById("you-number-display").outerHTML = `<img id="you-number-display" src="assets/images/${numbSelected}.png" alt="${numbSelected}">`;
+    });
   }
 }

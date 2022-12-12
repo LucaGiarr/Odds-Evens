@@ -22,6 +22,8 @@
 
 #window-submit-max-score {
   z-index: 5;
+
+  visibility: hidden;
 }
 
 #max-score {

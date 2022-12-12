@@ -37,7 +37,7 @@ startButton.addEventListener("click", function () {
     removeWindowAndOpacity();
     displayMaxScoreNumb();
   }
-})
+});
 
 oddsButton.addEventListener("click", function () {
 
@@ -77,19 +77,15 @@ document.getElementById("img-numbers").addEventListener("click", function () {
 });
 
 document.getElementById("play-button").onclick = function () {
+
+  // solution to disable button
+  // https://stackoverflow.com/questions/43514382/disable-multiple-clicks-javascript
+  // how to disable button
+  // https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a%20button%20using,disabled%20JavaScript%20property%20to%20false%20.
+
   runGame();
+  this.disabled = true;
 };
-
-
-
-
-
-
-
-
-
-
-
 
 // Functions
 /**
@@ -198,7 +194,7 @@ async function delayedFunctions() {
   let youScore = Math.max(scores[1]);
 
   if (Math.max(pcScore, youScore) == maxScoreNumb) {
-    
+
     document.getElementById("matt-blanket").style.visibility = "visible";
 
     if (pcScore > youScore) {

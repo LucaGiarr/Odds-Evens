@@ -1,0 +1,32 @@
+/* Images numbers */
+#img-numbers {
+  display: grid;
+  grid-auto-flow: column;
+  background-color: white;
+  border: 7px solid white;
+  justify-content: center;
+  align-content: center;
+}
+
+#img-numbers img {
+  /* transform: scale(0.7); */
+  margin: -5px; 
+}
+
+#img-numbers img:hover {
+  cursor: pointer;
+}
+
+#pc-number-display,#you-number-display {
+  position: relative;
+  transform: scale(1.4);
+}
+
+#pc-number-display {
+  top: -40px;
+  transform: rotate(180deg) scale(1.4);
+}
+
+#you-number-display{
+  top: 45px;
+}

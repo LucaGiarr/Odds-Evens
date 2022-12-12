@@ -152,7 +152,8 @@ async function delayedFunctions() {
   // random number is calculated (pc) and displayed
   let pcNum = randPcNumb();
 
-  // you-number is displayed (small) and checked (odd or even)
+  // you-number is obtained
+  let youNum = getNumber();
 
   // sum is calculated, checked (odd or even) and displayed
 
@@ -193,4 +194,13 @@ function randPcNumb() {
   let pcNum = Math.floor(Math.random() * 5) + 1;
   document.getElementById("pc-number-display").outerHTML = `<img id="pc-number-display" src="assets/images/number${pcNum}.png" alt="number${pcNum}">`;
   return pcNum;
+}
+
+/**
+ * Gets the number you choose
+ */
+function getNumber() {
+  let youNum = document.getElementById("you-number-display").getAttribute("alt");
+  youNum = parseInt(youNum[youNum.length - 1]);
+  return youNum;
 }

@@ -171,6 +171,7 @@ async function delayedFunctions() {
   displayResultsWinner(sumNum, sumOddsEvens, whoWins);  
 
   // Increment score and display pc score and you score
+  displayScores(whoWins);
 
   if (Math.max(pcScore, youScore) == maxScoreNumb) {
 
@@ -243,4 +244,30 @@ function displayResultsWinner(sumNum, sumOddsEvens, whoWins) {
 
   winner.style.transitionDuration = "0.3s";
   winner.style.opacity = "1";
+}
+
+// Function to display the scores in the DOM
+function displayScores(whoWins) {
+  let pcScore = document.getElementById("pc-score").innerText;
+  let pcScoreNum = parseInt(pcScore[pcScore.length - 4]);
+
+  let youScore = document.getElementById("you-score").innerText;
+  let youScoreNum = parseInt(youScore[youScore.length - 4]);
+
+  if (whoWins === "You win!") {
+    youScoreNum = youScoreNum + 1;
+    document.getElementById("you-score").innerText = `SCORE (${youScoreNum}/${maxScoreNumb})`;
+  } else {
+    pcScoreNum = pcScoreNum + 1;
+    document.getElementById("pc-score").innerText = `SCORE (${pcScoreNum}/${maxScoreNumb})`;
+  }
+
+  document.getElementById("sum-display-container").style.opacity = "0";
+  document.getElementById("sum-display-container").style.transitionDuration = "0.5s";
+
+  let disScores = document.getElementById("scores-display-container");
+  disScores.children[1].innerHTML = `<h3>${pcScoreNum}</h3>`;
+  disScores.children[3].innerHTML = `<h3>${youScoreNum}</h3>`;
+  document.getElementById("scores-display-container").style.opacity = "1";
+  document.getElementById("scores-display-container").style.transitionDuration = "0.5s";
 }

@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-   <meta name="description" content="Odds & Evens hand game">
-   <meta name="keywords" content="Odds, Evens, Odds & Evens, Odds and Evens, hand game, Odds & Evens hand game">
-   <meta name="author" content="Luca Giarrusso">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Odds & Evens hand game">
+  <meta name="keywords" content="Odds, Evens, Odds & Evens, Odds and Evens, hand game, Odds & Evens hand game">
+  <meta name="author" content="Luca Giarrusso">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Style Sheets -->
   <link rel="stylesheet" href="assets/css/default.css">
@@ -29,10 +29,11 @@
   <div class="full-page-container">
     <!-- Window where submit the winning score -->
     <div id="window-submit-max-score">
-       <label for="max-score">Winning Score:</label>
-       <input type="number" id="max-score" name="max-score" min="1" max="9" placeholder="max 9" value="1">
-       <button type="submit" id="how-to-play-button">HOW TO PLAY</button>
-       <button type="submit" id="start-button">START</button>
+      <label for="max-score">Winning Score:</label>
+      <input type="number" id="max-score" name="max-score" min="1" max="9" placeholder="max 9" value="1"
+        aria-label="winning score (max 9)">
+      <button type="submit" id="how-to-play-button" aria-label="How to play">HOW TO PLAY</button>
+      <button type="submit" id="start-button" aria-label="Start the game">START</button>
     </div>
 
     <!-- White "blanket" to shade the background -->
@@ -41,56 +42,59 @@
     <div id="game-screen-container">
       <!-- Countdown after play button is clicked -->
       <div id="countdown-container">
-         <h2 id="countdown-three">3</h2>
-         <h2 id="countdown-two">2</h2>
-         <h2 id="countdown-one">1</h2>
-         <h2 id="countdown-shoot">SHOOT!</h2>
+        <h2 id="countdown-three">3</h2>
+        <h2 id="countdown-two">2</h2>
+        <h2 id="countdown-one">1</h2>
+        <h2 id="countdown-shoot">SHOOT!</h2>
       </div>
-  
-    <div id="sum-display-container">
-      <h3>the sum is No.</h3>
-      <h3>odds</h3>
-      <h3>you win!</h3>
-    </div>
-  
-    <div id="scores-display-container">
-      <h3>pc score</h3>
-      <h3>0</h3>
-      <h3>your score</h3>
-      <h3>0</h3>
-    </div>
-  
-    <div id="end-game">
-      <h3>Game Over</h3>
-      <div id="end-game-buttons-container">
-        <button type="submit" id="play-again-button">PLAY AGAIN</button>
-        <button type="submit" id="go-to-start-button">GO TO START</button>
+
+      <!-- Container in which Sum, odd or even and winner are shown -->
+      <div id="sum-display-container">
+        <h3>the sum is No.</h3>
+        <h3>odds</h3>
+        <h3>you win!</h3>
+      </div>
+
+      <!-- Container in which the scores are shown -->
+      <div id="scores-display-container">
+        <h3>pc score</h3>
+        <h3>0</h3>
+        <h3>your score</h3>
+        <h3>0</h3>
+      </div>
+
+      <!-- Container in which the "End of the game" with buttons are shown -->
+      <div id="end-game">
+        <h3>Game Over</h3>
+        <div id="end-game-buttons-container">
+          <button type="submit" id="play-again-button" aria-label="Play again">PLAY AGAIN</button>
+          <button type="submit" id="go-to-start-button" aria-label="Go to start">GO TO START</button>
+        </div>
+      </div>
+
+      <!-- Container in which the pc-number and score are shown -->
+      <div id="number-display-container">
+        <div id="number-display-container-1">
+          <h3 id="pc-player">PC</h3>
+          <h4 id="pc-score">SCORE</h4>
+          <img id="pc-number-display" src="assets/images/question_mark.png" alt="question mark">
+        </div>
+
+        <!-- Container in which the you-number and score are shown -->
+        <div id="number-display-container-2">
+          <img id="you-number-display" src="assets/images/number1.png" alt="number1">
+          <h3 id="you-player">YOU</h3>
+          <h4 id="you-score">SCORE</h4>
+        </div>
       </div>
     </div>
-  
-    <!-- Container in which the pc-number and score are shown -->
-    <div id="number-display-container">
-      <div id="number-display-container-1">
-        <h3 id="pc-player">PC</h3>
-        <h4 id="pc-score">SCORE</h4>
-        <img id="pc-number-display" src="assets/images/question_mark.png" alt="question mark">
-      </div>
-  
-      <!-- Container in which the you-number and score are shown -->
-      <div id="number-display-container-2">
-        <img id="you-number-display" src="assets/images/number1.png" alt="number1">
-        <h3 id="you-player">YOU</h3>
-        <h4 id="you-score">SCORE</h4>
-      </div>
-    </div>
-  </div>
-  
+
     <!-- Container with the ODDS and EVENS buttons -->
     <div id="buttons">
-      <button id="odds-button">ODDS</button>
-      <button id="evens-button">EVENS</button>
+      <button id="odds-button" aria-label="Odds">ODDS</button>
+      <button id="evens-button" aria-label="Evens">EVENS</button>
     </div>
-  
+
     <!-- Container with the hand images -->
     <div id="img-numbers">
       <img id="img0" src="assets/images/number0.png" alt="number0">
@@ -100,23 +104,23 @@
       <img id="img4" src="assets/images/number4.png" alt="number4">
       <img id="img5" src="assets/images/number5.png" alt="number5">
     </div>
-  
+
     <div id="play-button-container">
-      <button id="play-button">PLAY</button>
+      <button id="play-button" aria-label="Play the game">PLAY</button>
     </div>
-  
+
     <footer>
       <div class="footer">
-         <h2><span>Powered by</span> Luca Giarrusso</h2>
-         <div id="icons_footer">
-            <a href="https://github.com/LucaGiarr?tab=repositories"
-               aria-label="Go to the github page (opens in a new tab)" target="_blank"><i
-                  class="fa-brands fa-github"></i></a>
-         </div>
+        <h2><span>Powered by</span> Luca Giarrusso</h2>
+        <div id="icons_footer">
+          <a href="https://github.com/LucaGiarr?tab=repositories"
+            aria-label="Go to the github page (opens in a new tab)" target="_blank"><i
+              class="fa-brands fa-github"></i></a>
+        </div>
       </div>
-   </footer>
+    </footer>
   </div>
-  
+
   <!-- Script for fontawesome -->
   <script src="https://kit.fontawesome.com/b08c9ce26d.js" crossorigin="anonymous"></script>
 

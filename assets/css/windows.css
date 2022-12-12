@@ -1,5 +1,5 @@
 /* General rule */
-#window-submit-max-score, #sum-display-container,#scores-display-container, #end-game {
+#window-submit-max-score,#countdown-container, #sum-display-container,#scores-display-container, #end-game {
   display: flex;
   width: 400px;
   height: 240px;
@@ -56,10 +56,31 @@
   opacity: 0;
 }
 
-
 /* end game window */
 #end-game {
   z-index: 4;
+  opacity: 0;
+}
+
+/* countdown window */
+#countdown-container {
+  opacity: 0;
+  z-index: 3;
+}
+
+#countdown-container h2{
+  font-size: 80px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#countdown-three, #countdown-two, #countdown-one, #countdown-shoot {
+  position: absolute;
+  top: -20px;
+}
+
+#countdown-two, #countdown-one, #countdown-shoot {
   opacity: 0;
 }
 

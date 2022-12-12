@@ -155,16 +155,17 @@ function runGame() {
 async function delayedFunctions() {
 
   // 3, 2, 1... SHOOT!!
+  countdown ();
+
+  await delay(4000);
 
   // random number is calculated (pc) and displayed
   let pcNum = randPcNumb();
 
-  // await delay(4000);
-
   // you-number is obtained
   let youNum = getNumber();
 
-  // await delay(500);
+  await delay(500);
 
   // sum is calculated, checked (odd or even) and displayed
   let sumNum = sumNumbers(pcNum, youNum);
@@ -234,6 +235,43 @@ async function delayedFunctions() {
 // https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Countdown after play button is clicked
+async function countdown () {
+  let countdownCont = document.getElementById("countdown-container");
+  let countdownThree = document.getElementById("countdown-three");
+  let countdownTwo = document.getElementById("countdown-two");
+  let countdownOne = document.getElementById("countdown-one");
+  let countdownShoot = document.getElementById("countdown-shoot");
+
+  // initial status - Three
+  countdownCont.style.opacity = "1";
+  countdownThree.style.opacity = "1";
+
+  await delay(1000);
+
+  // Two
+  countdownThree.style.opacity = "0";
+  countdownTwo.style.opacity = "1";
+
+  await delay(1000);
+
+  // One
+  countdownTwo.style.opacity = "0";
+  countdownOne.style.opacity = "1";
+
+  await delay(1000);
+
+  // Shoot
+  countdownOne.style.opacity = "0";
+  countdownShoot.style.opacity = "1";
+
+  await delay(1000);
+
+  // final status
+  countdownShoot.style.opacity = "0";
+  countdownCont.style.opacity = "0";
 }
 
 /**

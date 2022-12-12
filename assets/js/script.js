@@ -198,6 +198,8 @@ async function delayedFunctions() {
   let youScore = Math.max(scores[1]);
 
   if (Math.max(pcScore, youScore) == maxScoreNumb) {
+    
+    document.getElementById("matt-blanket").style.visibility = "visible";
 
     if (pcScore > youScore) {
       displayEndGame("Game Over");

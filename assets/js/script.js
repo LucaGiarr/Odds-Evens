@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (maxScoreNumb === "") {
 
-      throw alert("Select the winning score");
+      throw alert("Set the winning score");
 
     } else if (maxScoreNumb > 9) {
 

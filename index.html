@@ -26,7 +26,10 @@
     <h1>Odds & Evens</h1>
   </header>
 
-  <div class="full-page-container">
+  <!-- White "blanket" to shade the background -->
+  <div id="matt-blanket"></div>
+
+  <div class="white-windows">
     <!-- Window where submit the winning score -->
     <div id="window-submit-max-score">
       <label for="max-score">Winning Score:</label>
@@ -36,56 +39,53 @@
       <button type="submit" id="start-button" aria-label="Start the game">START</button>
     </div>
 
-    <!-- White "blanket" to shade the background -->
-    <div id="matt-blanket"></div>
+    <!-- Countdown after play button is clicked -->
+    <div id="countdown-container">
+      <h2 id="countdown-three">3</h2>
+      <h2 id="countdown-two">2</h2>
+      <h2 id="countdown-one">1</h2>
+      <h2 id="countdown-shoot">SHOOT!</h2>
+    </div>
 
-    <div id="game-screen-container">
-      <!-- Countdown after play button is clicked -->
-      <div id="countdown-container">
-        <h2 id="countdown-three">3</h2>
-        <h2 id="countdown-two">2</h2>
-        <h2 id="countdown-one">1</h2>
-        <h2 id="countdown-shoot">SHOOT!</h2>
+    <!-- Container in which Sum, odd or even and winner are shown -->
+    <div id="sum-display-container">
+      <h3>the sum is No.</h3>
+      <h3>odds</h3>
+      <h3>you win!</h3>
+    </div>
+
+    <!-- Container in which the scores are shown -->
+    <div id="scores-display-container">
+      <h3>pc score</h3>
+      <h3>0</h3>
+      <h3>your score</h3>
+      <h3>0</h3>
+    </div>
+
+    <!-- Container in which the "End of the game" with buttons are shown -->
+    <div id="end-game">
+      <h3>Game Over</h3>
+      <div id="end-game-buttons-container">
+        <button type="submit" id="play-again-button" aria-label="Play again">PLAY AGAIN</button>
+        <button type="submit" id="go-to-start-button" aria-label="Go to start">GO TO START</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="game-screen-container">
+    <!-- Container in which the pc-number and score are shown -->
+    <div id="number-display-container">
+      <div id="number-display-container-1">
+        <h3 id="pc-player">PC</h3>
+        <h4 id="pc-score">SCORE</h4>
+        <img id="pc-number-display" src="assets/images/question_mark.png" alt="question mark">
       </div>
 
-      <!-- Container in which Sum, odd or even and winner are shown -->
-      <div id="sum-display-container">
-        <h3>the sum is No.</h3>
-        <h3>odds</h3>
-        <h3>you win!</h3>
-      </div>
-
-      <!-- Container in which the scores are shown -->
-      <div id="scores-display-container">
-        <h3>pc score</h3>
-        <h3>0</h3>
-        <h3>your score</h3>
-        <h3>0</h3>
-      </div>
-
-      <!-- Container in which the "End of the game" with buttons are shown -->
-      <div id="end-game">
-        <h3>Game Over</h3>
-        <div id="end-game-buttons-container">
-          <button type="submit" id="play-again-button" aria-label="Play again">PLAY AGAIN</button>
-          <button type="submit" id="go-to-start-button" aria-label="Go to start">GO TO START</button>
-        </div>
-      </div>
-
-      <!-- Container in which the pc-number and score are shown -->
-      <div id="number-display-container">
-        <div id="number-display-container-1">
-          <h3 id="pc-player">PC</h3>
-          <h4 id="pc-score">SCORE</h4>
-          <img id="pc-number-display" src="assets/images/question_mark.png" alt="question mark">
-        </div>
-
-        <!-- Container in which the you-number and score are shown -->
-        <div id="number-display-container-2">
-          <img id="you-number-display" src="assets/images/number1.png" alt="number1">
-          <h3 id="you-player">YOU</h3>
-          <h4 id="you-score">SCORE</h4>
-        </div>
+      <!-- Container in which the you-number and score are shown -->
+      <div id="number-display-container-2">
+        <img id="you-number-display" src="assets/images/number1.png" alt="number1">
+        <h3 id="you-player">YOU</h3>
+        <h4 id="you-score">SCORE</h4>
       </div>
     </div>
 

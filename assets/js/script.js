@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (maxScoreNumb === "") {
 
-      throw alert("Select a max number of rounds");
+      throw alert("Select the winning score");
 
     } else if (maxScoreNumb > 9) {
 
-      throw alert("Max number of rounds is 9");
+      throw alert("Max winning score is 9");
 
     } else {
       removeWindowAndOpacity();

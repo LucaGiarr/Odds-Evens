@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Functions
   /**
-   * Hides the small window with the input for the number of rounds and remove opacity from the page
+   * Hides the small white window with the input for the winning score and remove opacity from the page
    */
   function removeWindowAndOpacity() {
     document.getElementById("window-submit-max-score").style.visibility = "hidden";

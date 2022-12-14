@@ -1,108 +1,352 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Odds & Evens
 
-Welcome LucaGiarr,
+Odds & Evens is a hand game similar to a simplified morra. It is often used as a drawing tool between two contenders, similar to heads or tails with a coin or rock paper or scissors, for example to determine who gets the first turn in a game with two contenders or two teams.
+The website is designed to be responsive website allowing visitors to view and browse it on a range of devices.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Odds & Evens Website shown on a range of devices](docs/odds&evens-website.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[Check out Odds & Evens on Github](https://github.com/LucaGiarr/Odds-Evens)
 
-## Gitpod Reminders
+## CONTENTS
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [User Experience (UX)](#User-Experience-(UX))
+  * [Initial Discussion](#Initial-Discussion)
+    * [Key information for the site](#Key-information-for-the-site)
+    * [First Time and Frequent Visitor Goals](#First-Time-and-Frequent-Visitor-Goals)
 
-`python3 -m http.server`
+* [Design](#Design)
+  * [Colour Scheme](#Colour-Scheme)
+  * [Typography](#Typography)
+  * [Imagery](#Imagery)
+  * [Wireframes](#Wireframes)
+  * [Features](#Features)
+  * [Accessibility](#Accessibility)
 
-A blue button should appear to click: _Make Public_,
+* [Technologies Used](#Technologies-Used)
+  * [Languages Used](#Languages-Used)
+  * [Frameworks, Libraries & Programs Used](#Frameworks,-Libraries-&-Programs-Used)
 
-Another blue button should appear to click: _Open Browser_.
+* [Deployment & Local Development](#Deployment-&-Local-Development)
+  * [Deployment](#Deployment)
+  * [Local Development](#Local-Development)
+    * [How to Fork](#How-to-Fork)
+    * [How to Clone](#How-to-Clone)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* [Testing](#Testing)
+  * [W3C Validator](#W3C-Validator)
+  * [JSHint Validator](#jshint-validator)
+  * [Solved Bugs](#Solved-Bugs)
+  * [Known Bugs](#Known-Bugs)
+  * [Lighthouse](#Lighthouse)
+    * [Index Page](#Index-Page)
+    * [How to Play Page](#how-to-play-page)
+  * [Full Testing](#Full-Testing)
+  
+* [Credits](#Credits)
+  * [Code Used](#Code-Used)
+  * [Content](#Content)
+  * [Media](#Media)
+    * [Numbers (hands) Images](#numbers-hands-images)
+  * [Acknowledgments](#Acknowledgments)
 
-A blue button should appear to click: _Make Public_,
+- - -
 
-Another blue button should appear to click: _Open Browser_.
+## User Experience (UX)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Initial Discussion
 
-To log into the Heroku toolbelt CLI:
+The "Odds & Evens" website is a hand game similar to a simplified morra where the user plays against the pc. He/she, before starting the game, decides the maximum winning score at which one of the two players wins. Whoever reaches the pre-set maximum score wins the game.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Key information for the site
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* Digital hand game.
+* Maximum score settable.
 
-------
+#### First Time and Frequent Visitor Goals
 
-## Release History
+* To make it easy for the user to browse and play the game.
+* To be able to play the game on a range of devices with different screen sizes and resolutions.
+* To be able to play at any time and anywhere (internet connection required).
+* To be able to change the duration of the game setting a higher maximum winning score.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- - -
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Design
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Colour Scheme
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Odds & Evens Website Colour Palette](docs/palettecolors.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The predominant color used in the website is the Misty Rose that covers the background. It matches with the Mustard and the Persian Indigo of the main game area and it also matches with the Dodger Blue of the title. The white color covers the area of the windows and, on the instruction page, the area with the text. The color of the text inside the buttons and the text, in general, is black. The color palette was created using the [Coolors](https://coolors.co/) website.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Typography
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Google Fonts was used for the following fonts:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* Carter One is used for the text in the buttons.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* Luckiest Guy is used for the title.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* Times New Roman is used for the text of the instructions.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* Lato is used for the text in the footer.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* Sriracha is used for the remaining text (labels and text in the white windows).
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Imagery
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+The images of the numbers (hands) are personal pictures.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Wireframes
 
-------
+The website was developed in such a way that the user can have the same visual experience regardless of the screen size (hence the device he/she wants to play on).
 
-## FAQ about the uptime script
+Wireframes, drawn by hand, are the same for desktop, tablet and mobile and they are linked below.
 
-**Why have you added this script?**
+[First Page Wireframe](docs/wireframes/wireframe1.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[Page with the game Wireframe](docs/wireframes/wireframe2.png)
 
-**How will this affect me?**
+[Info displayed in the white windows Wireframe](docs/wireframes/wireframe3.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+[Page with the game instructions Wireframe](docs/wireframes/wireframe4.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Features
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The website is comprised of two pages; one where the user plays the game (main page) and one with the game instructions.
 
-**So….?**
+* All Pages of the website have:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  * The title of the site at the top page and a pink background. 
 
-**Can I opt out?**
+  * A footer which contains the social media icon link github.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* Main Page.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+  ![Index Page](docs/index.png)
 
-**Anything more?**
+  On this page, the user plays the game. When loaded the page shows a white window with a space to input the winning score and two buttons; one that opens the game instructions page and one that starts the game.
+  On this page, if the user does not input a winning score or if the winning score is greater than 9, the user will receive an alert saying "Set the winning score" in the first case and "Max winning score is 9" in the second case.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+  ![Alert insert a value](docs/alert-insert-a-value.png)
+  ![Alert winning score](docs/alert-maxwinscore.png)
 
----
+  Once the start button is clicked, the winning score will be shown below the players (PC and YOU) on the right side of the colored rectangle (blue and yellow).
 
-Happy coding!
+  ![Index Page - Screen1](docs/screen1.png)
+  
+
+  On this page, the user can make the choice of "ODDS" or "EVENS" and also the number by clicking on the buttons and in the images (hands) respectively.
+
+  ![Index Page - Screen2](docs/screen2.png)
+
+  Once play is clicked the countdown will start, then the random number "chosen" by the pc will show up and a few white windows (similar to the one at the beginning of the game where the user sets the winning score) are shown displaying the sum of the two numbers, if the sum is odd or even, the winner and the score.
+
+  ![Index Page - Screen3](docs/screen3.png)
+  ![Index Page - Screen4](docs/screen4.png)
+  ![Index Page - Screen5](docs/screen5.png)
+
+  When the game has ended, the user can choose to play again (the winning score of the last game will be kept) or start a new game where he/she can choose a new winning score.
+
+  ![Index Page - Screen6](docs/screen6.png)
+
+* Game Instruction Page.
+
+  The user will be directed to the game instructions page by clicking the "HOW TO PLAY" button before starting the game.
+  
+  ![Index Page](docs/index.png)
+  ![Game Instructions Page](docs/gameinstructions.png)
+
+  On this page, the user can read the game instructions and once finished he/she can go back to the game by clicking the "BACK TO THE GAME" button. The user can also click on the GitHub icon to check my projects out.
+
+* Future Implementations.
+
+  * Increase the winning score to more than 9.
+
+  * Allow the user to play against another user and not just against the pc.
+
+### Accessibility
+
+To guarantee to all users to play the game, including the ones with disabilities, I added as many features required as possible to make sure the disability barriers are overcome by:
+
+* Using semantic HTML.
+* Using descriptive alt attributes on images.
+* Providing information for screen readers where there are icons with no text such as the footer icons.
+* Ensuring that there is a sufficient colour contrast throughout the site.
+
+- - -
+
+## Technologies Used
+
+### Languages Used
+
+HTML, CSS and JavaScript were used to create this website.
+
+### Frameworks, Libraries & Programs Used
+
+Git - For version control.
+
+Github - To save and store the files for the website.
+
+Google Fonts - To import the fonts used on the website.
+
+Font Awesome - For the iconography on the website.
+
+Google Dev Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+[Tiny PNG](https://tinypng.com/) To compress images.
+
+[Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
+
+- - -
+
+## Deployment & Local Development
+
+### Deployment
+
+Github Pages was used to deploy the live website. The instructions to achieve this are below:
+
+1. Log in (or sign up) to Github.
+2. Find the repository for this project, Odds-Evens.
+3. Click on the Settings link.
+4. Click on the Pages link in the left hand side navigation bar.
+5. In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
+6. Click Save. Your live Github Pages site is now deployed at the URL shown.
+
+### Local Development
+
+#### How to Fork
+
+To fork the Odds-Evens repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, LucaGiarr/Odds-Evens.
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the Odds-Evens repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, LucaGiarr/Odds-Evens.
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+- - -
+
+## Testing
+
+Testing was ongoing throughout the entire build. I utilised Chrome developer tools while building to pinpoint and troubleshoot any issues as I went along.
+
+The following issues were raised during my mid project meeting with my mentor:
+
+* The game was not centred in the mobile view. 
+
+### W3C Validator
+
+The W3C validator was used to validate the HTML on all pages of the website. It was also used to validate all CSS files.
+
+* [Index Page HTML](docs/testing/w3c/w3c-index.png)
+* [howtoplay HTML](docs/testing/w3c/w3c-howtoplay.png)
+* [style.css CSS](docs/testing/w3c/w3c-style.png)
+* [default.css CSS](docs/testing/w3c/w3c-default.png)
+* [buttons.css CSS](docs/testing/w3c/w3c-buttons.png)
+* [footer.css CSS](docs/testing/w3c/w3c-footer.png)
+* [images.css CSS](docs/testing/w3c/w3c-images.png)
+* [windows.css CSS](docs/testing/w3c/w3c-windows.png)
+
+### JSHint Validator
+
+The JSHint validator was used to validate the JavaScript code the website.
+
+* [Script JavaScript - Page 1](docs/testing/jshint/script1.png)
+* [Script JavaScript - Page 2](docs/testing/jshint/script2.png)
+* [Script JavaScript - Page 3](docs/testing/jshint/script3.png)
+* [Script JavaScript - Page 4](docs/testing/jshint/script4.png)
+* [Script JavaScript - Page 5](docs/testing/jshint/script5.png)
+* [Script JavaScript - Page 6](docs/testing/jshint/script6.png)
+* [Script JavaScript - Page 7](docs/testing/jshint/script7.png)
+
+### Solved Bugs
+
+1. In the mobile view (but just iphone), when clicked to input the winning score, the whole page would move on the left. I fixed this re-organising the the lements in the html file better and modifying the css files accordingly.
+
+2. When the start button was clicked multiple times the game would run the many times the start button was clicked. I searched a solution on the web and adopted the solution in the websites linked below where it was suggested to disable the button after the first click. 
+
+    https://stackoverflow.com/questions/43514382/disable-multiple-clicks-javascript  
+
+    https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a%20button%20using,disabled%20JavaScript%20property%20to%20false%20.
+
+
+3. To allow for the white windows (displaying info on the sum, the winner, etc) to be displayed one after the other in a timely way, a delay function with async functions were needed. 
+Info and code for the function "delay" taken from the websites below. 
+
+    https://linuxhint.com/wait-x-seconds-javascript/ 
+    
+    https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+
+### Known Bugs
+
+1. In the area of the notch (just iphone), the background color of the page is brighter while the white windows (before starting the game and at the end of the game) are displayed (found in the Iphone 12). 
+
+### Lighthouse
+
+I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
+
+#### Index Page
+
+Lighthouse testing:
+
+[Lighthouse Testing for Desktop Index Page](docs/testing/lighthouse/index-desk.png)
+
+[Lighthouse Testing for Mobile Index Page](docs/testing/lighthouse/index-mob.png)
+
+#### How to Play Page
+
+Lighthouse testing:
+
+[Lighthouse Testing for Desktop How to Play Page](docs/testing/lighthouse/howtoplay-desk.png)
+
+[Lighthouse Testing for Mobile Index Page](docs/testing/lighthouse/howtoplay-mob.png)
+
+### Full Testing
+
+To fully test my website I performed the following testing using two different browsers (google chrome and safari) and devices (Macbook Pro 13 inch, iPhone 12).
+
+Furthermore, I went through each page using the google chrome developer tool to make sure that the pages are responsive on all different screen sizes.
+
+Links and Buttons.
+
+1. Test each link and button on all pages. Each link and button worked as expected, and any link leading to external pages opened correctly in a seperate browser tab.
+
+- - -
+
+## Credits
+
+### Code Used
+
+* [Delay function - link 1](https://linuxhint.com/wait-x-seconds-javascript/) 
+
+* [Delay function - link 2](https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep)
+
+* [Prevent buttons to be clicked multiple times - link 1](https://stackoverflow.com/questions/43514382/disable-multiple-clicks-javascript)
+* [Prevent buttons to be clicked multiple times - link 1](https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a%20button%20using,disabled%20JavaScript%20property%20to%20false%20.)
+
+### Content
+
+Content for the website was written by Luca Giarrusso.
+
+### Media
+
+#### Numbers (hands) Images
+
+* Image are photographs taken by Luca Giarrusso.
+
+### Acknowledgments
+
+I would like to acknowledge the following people who helped me along the way in completing my second milestone project:
+
+* Antonio Rodriguez, my Code Institute Mentor that was very helpfull, available who gave me suggestions and tips on how to approach this project and at the end on the overall look of the website and make sure that the game worked properly and the code validators were all passed.
+* [Code Institure](https://codeinstitute.net/ie/), for the lessons (especially the videos related to this project and the ones on the Love Maths project) that were very useful and needful to complete this milestone project.
+

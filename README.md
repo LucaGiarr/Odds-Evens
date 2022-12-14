@@ -55,7 +55,7 @@ The website is designed to be responsive website allowing visitors to view and b
 
 ### Initial Discussion
 
-The "Odds & Evens" website is a hand game similar to a simplified morra where the user plays against the pc. He/she, before starting the game, decides the maximum winning score at which one of the two players wins. Whoever reaches the pre-set maximum score wins the game.
+The "Odds & Evens" website is a hand game similar to a simplified morra where the user plays against the pc. He/she, before starting the game, decides the winning score at which one of the two players wins. Whoever reaches first the winning score wins the game.
 
 #### Key information for the site
 

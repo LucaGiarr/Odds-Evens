@@ -242,7 +242,7 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 
 The following issues were raised during my mid project meeting with my mentor:
 
-* The game was not centred in the mobile view. 
+* The website was not centered when opened on a smartphone (mobile).
 
 ### W3C Validator
 

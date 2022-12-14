@@ -60,14 +60,14 @@ The "Odds & Evens" website is a hand game similar to a simplified morra where th
 #### Key information for the site
 
 * Digital hand game.
-* Maximum score settable.
+* Winning score settable.
 
 #### First Time and Frequent Visitor Goals
 
 * To make it easy for the user to browse and play the game.
 * To be able to play the game on a range of devices with different screen sizes and resolutions.
 * To be able to play at any time and anywhere (internet connection required).
-* To be able to change the duration of the game setting a higher maximum winning score.
+* To be able to change the duration of the game setting a higher winning score.
 
 - - -
 

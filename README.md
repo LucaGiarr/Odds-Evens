@@ -129,6 +129,7 @@ The website is comprised of two pages; one where the user plays the game (main p
   On this page, if the user does not input a winning score or if the winning score is greater than 9, the user will receive an alert saying "Set the winning score" in the first case and "Max winning score is 9" in the second case.
 
   ![Alert insert a value](docs/alert-insert-a-value.png)
+  
   ![Alert winning score](docs/alert-maxwinscore.png)
 
   Once the start button is clicked, the winning score will be shown below the players (PC and YOU) on the right side of the colored rectangle (blue and yellow).
